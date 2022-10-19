@@ -18,6 +18,7 @@ export default function Mbti() {
   const survey = useSelector((state) => state.mbti.survey);
   const page = useSelector((state) => state.mbti.page);
   const dispatch = useDispatch();
+  const result = useSelector((state) => state.mbti.mbtiResult)
 
   return (
     <>
@@ -34,6 +35,7 @@ export default function Mbti() {
                 }}
               />
               {index === 0 && <Vs>VS</Vs>}
+              {console.log(result)}
             </li>
           );
         })}
